@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  
+
+.addContentForm {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  padding: 20px;
+  width: 400px;
+  min-height: 400px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  border: 1px solid grey;
+  color: grey;
+}
+
+.addContentForm select {
+  width: 50%;
+  color: grey;
+  background-color: #000;
+}
+
+.addContentForm input {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+  color: grey;
+  background-color: #000;
+  border: 1px solid grey;
+  padding: 10px;
+  margin: 20px;
+}
+
+.addContentForm textarea {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+  color: grey;
+  background-color: #000;
+  border: 1px solid grey;
+  padding: 10px;
+  margin: 20px;
+}
+
+.addContentForm__submit {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: aquamarine;
+}

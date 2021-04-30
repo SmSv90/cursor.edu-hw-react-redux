@@ -1,0 +1,98 @@
+.wrapper__post {
+  width: 800px;
+  min-height: 400px;
+  background-color: rgb(48, 163, 163);
+  border: 5px solid black;
+  margin: 20px auto;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(27, 22, 22);
+}
+
+.author {
+  display: flex;
+  width: 100%;
+  min-height: 25%;
+}
+
+.author-avatar {
+  padding-left: 15px;
+  padding-top: 5px;
+  width: 15%;
+}
+
+.author-avatar img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.author-info {
+  width: 85%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5px;
+}
+
+.author-info div {
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.author-info .author-name {
+  font-weight: bold;
+  margin-right: 0;
+}
+
+.author-info .author-nickname,
+.author-info .date {
+  color: rgb(54, 54, 54);
+}
+
+.author-info .info-option {
+  margin-left: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.author-icon img,
+.info-option img,
+.social img {
+  width: 20px;
+  height: 20px;
+}
+
+.content .content-text {
+  text-align: left;
+  width: 85%;
+  margin-left: 15%;
+  margin-top: -5%;
+  padding-left: 5px;
+}
+
+.content-image {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0;
+  margin-right: 10px;
+}
+
+.content-image img {
+  margin-top: 5px;
+  width: 85%;
+  height: auto;
+  border-radius: 3%;
+}
+
+.social {
+  display: flex;
+  padding-left: 15%;
+  margin-top: 10px;
+}
+
+.social div {
+  margin-right: 15%;
+  font-size: 16px;
+  padding-bottom: 10px;
+  color: rgb(27, 22, 22);
+}
