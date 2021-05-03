@@ -1,5 +1,6 @@
-import React from 'react';
-import { useSelector } from "react-redux";
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import { changeCount } from "../../store";
 
 import checkSign from '../../assets/postPage/approval-symbol-in-badge.png';
 import downSign from '../../assets/postPage/down-chevron.png';
@@ -9,12 +10,39 @@ import retweetSign from '../../assets/postPage/retweet.png';
 import uploadSign from '../../assets/postPage/upload.png';
 import './Post.css'
 
+// eslint-disable-next-line no-unused-vars
 const Post = (props) => {
   const posts = useSelector((state) => state.posts);
 
+  const dispatch = useDispatch();
+
+  const [comment, setComment] = useState(0);
+  const [retweet, setRetweet] = useState(0);
+  const [like, setLike] = useState(0);
+
+  const handleCount = event => {
+    switch (event.target.name) {
+      case "comment":
+        comment === 0 ? setComment(comment + 1) : setComment(comment - 1);
+        dispatch(changeCount({comment}));
+        break;
+      case "retweet":
+        retweet === 0 ? setRetweet(retweet + 1) : setRetweet(retweet - 1);
+        dispatch(changeCount({retweet}));
+        break;
+      case "like":
+       like === 0 ? setLike(like + 1) : setLike(like - 1);
+        dispatch(changeCount({like}));
+        break;
+      default:
+        break;
+    }
+
+  }
+
   return (
       posts.map(post => (
-      <div className="wrapper__post">
+      <div className="wrapper__post" key={post.id}>
       <div className="author">
         <div className="author-avatar"><img src={post.avatar} alt="avatar" /></div>
         <div className="author-info">
@@ -30,9 +58,12 @@ const Post = (props) => {
         <div className="content-image"><img src={post.contentImage} alt="image" /></div>
       </div>
       <div className="social">
-        <div className="social-comment"><img src={commentSign} alt="comment" /> {post.comment}</div>
-        <div className="social-retweet"><img src={retweetSign} alt="retweet" /> {post.retweet}</div>
-        <div className="social-like"><img src={heartSign} alt="heart" /> {post.like}</div>
+        <div className="social-comment">
+          <img name="comment" src={commentSign} alt="comment" onClick={handleCount} /> 
+          {post.comment}
+        </div>
+        <div className="social-retweet"><img name="retweet" src={retweetSign} alt="retweet" onClick={handleCount} /> {post.retweet}</div>
+        <div className="social-like"><img name="like" src={heartSign} alt="heart" onClick={handleCount} /> {post.like}</div>
         <div className="social-share"><img src={uploadSign} alt="upload" /></div>
       </div>
     </div>

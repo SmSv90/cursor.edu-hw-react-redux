@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { React, useState } from "react";
 import { useDispatch } from "react-redux";
 import { createPost } from "../../store";
@@ -12,51 +13,72 @@ export const AddContentForm = (props) => {
     },
     {
       id: 1,
-      nickname: "dart_vader",
+      nickname: "@dart_vader",
       name: "Anakin Skywalker",
-      avatar: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Anakin-Jedi.jpg/220px-Anakin-Jedi.jpg'
+      avatar: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Anakin-Jedi.jpg/220px-Anakin-Jedi.jpg',
     },
     {
       id: 2,
-      nickname: "last_jedy",
+      nickname: "@last_jedy",
       name: "Luke Skywalker",
-      avatar: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Anakin-Jedi.jpg/220px-Anakin-Jedi.jpg'
+      avatar: 'https://images2.minutemediacdn.com/image/fetch/w_736,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fwinteriscoming.net%2Ffiles%2F2020%2F12%2FScreen-Shot-2020-12-23-at-10.27.59-AM-850x560.jpg',
     },
     {
       id: 3,
-      nickname: "scavenger",
+      nickname: "@scavenger",
       name: "Rey Skywalker",
-      avatar: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/74/Anakin-Jedi.jpg/220px-Anakin-Jedi.jpg'
-    }    
+      avatar: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-wars-episode-9-rise-of-skywalker-rey-1580293398.jpg?crop=0.551xw:0.414xh;0.200xw,0.122xh&resize=1200:*',
+    }
   ]
-
-  const [contentText, setContentText] = useState(props.contentText);
-  const [contentImage, setContentImage] = useState(props.contentImage);
-  const [authorName, setAuthorName] = useState(props.authorName);
-
+ 
   const dispatch = useDispatch();
 
-  const handleChange = (event) => {
-    switch (event.target.name) {
-      case "contentText":
-        setContentText(event.target.value)
-        break;
-      case "contentImage":
-        setContentImage(event.target.value)
-        break;
-      case "authorName":
-        setAuthorName(event.target.value)
-        break;
-      default:
-        break;
-    }
+  const date = new Date(Date.now()).toDateString();
+
+    const [inputValue, setInputValue] = useState({
+    name: "",
+    nickname: "",
+    avatar: "",
+    contentImage: "",
+    contentText: "",
+    comment : 0,
+    retweet : 0,
+    like : 0,
+    date: date
+  });
+  
+  const handleChange = event => {
+    setInputValue({...inputValue, [event.target.name]: event.target.value});
   };
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(createPost(contentText));
-    dispatch(createPost(contentImage));
-    dispatch(createPost(authorName));
+
+    const searchName = event.target.name.value;
+    const authorObj = authors.find(author => author.name === searchName)
+
+    for (let key in inputValue) {
+      if ((inputValue[key] == "") && (key in authorObj)) {
+        inputValue[key] = authorObj[key];
+      }
+    }
+
+    dispatch(createPost(inputValue));
+    
+    event.target.reset();
+
+    setInputValue({    
+      name: "",
+      nickname: "",
+      avatar: "",
+      contentImage: "",
+      contentText: "",
+      comment : 0,
+      retweet : 0,
+      like : 0,
+      date: date
+    });
 }
 
 
@@ -64,7 +86,7 @@ export const AddContentForm = (props) => {
     <div className="addContentForm">
       
       <form onSubmit={handleSubmit}>
-        <select name="authorName" id="authorName" value={authorName} onChange={handleChange}>
+        <select name="name" id="name" onChange={handleChange}>
           {authors.map(author => (
             <option key={author.id} value={author.name}>{author.name}</option>
           ))}

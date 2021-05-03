@@ -1,5 +1,7 @@
 .wrapper__post {
-  width: 800px;
+  display: flex;
+  flex-direction: column;
+  width: 900px;
   min-height: 400px;
   background-color: rgb(48, 163, 163);
   border: 5px solid black;
