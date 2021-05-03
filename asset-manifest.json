@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/cursor.edu-hw-react-redux/static/css/main.9a4e5a1b.chunk.css",
-    "main.js": "/cursor.edu-hw-react-redux/static/js/main.19f5e2d7.chunk.js",
-    "main.js.map": "/cursor.edu-hw-react-redux/static/js/main.19f5e2d7.chunk.js.map",
-    "runtime-main.js": "/cursor.edu-hw-react-redux/static/js/runtime-main.ecc61c08.js",
-    "runtime-main.js.map": "/cursor.edu-hw-react-redux/static/js/runtime-main.ecc61c08.js.map",
-    "static/js/2.dd84eeb9.chunk.js": "/cursor.edu-hw-react-redux/static/js/2.dd84eeb9.chunk.js",
-    "static/js/2.dd84eeb9.chunk.js.map": "/cursor.edu-hw-react-redux/static/js/2.dd84eeb9.chunk.js.map",
-    "static/js/3.7841e5f3.chunk.js": "/cursor.edu-hw-react-redux/static/js/3.7841e5f3.chunk.js",
-    "static/js/3.7841e5f3.chunk.js.map": "/cursor.edu-hw-react-redux/static/js/3.7841e5f3.chunk.js.map",
+    "main.css": "/cursor.edu-hw-react-redux/static/css/main.abd616b1.chunk.css",
+    "main.js": "/cursor.edu-hw-react-redux/static/js/main.14d53345.chunk.js",
+    "main.js.map": "/cursor.edu-hw-react-redux/static/js/main.14d53345.chunk.js.map",
+    "runtime-main.js": "/cursor.edu-hw-react-redux/static/js/runtime-main.5fd56158.js",
+    "runtime-main.js.map": "/cursor.edu-hw-react-redux/static/js/runtime-main.5fd56158.js.map",
+    "static/js/2.b7056db4.chunk.js": "/cursor.edu-hw-react-redux/static/js/2.b7056db4.chunk.js",
+    "static/js/2.b7056db4.chunk.js.map": "/cursor.edu-hw-react-redux/static/js/2.b7056db4.chunk.js.map",
+    "static/js/3.778e16d7.chunk.js": "/cursor.edu-hw-react-redux/static/js/3.778e16d7.chunk.js",
+    "static/js/3.778e16d7.chunk.js.map": "/cursor.edu-hw-react-redux/static/js/3.778e16d7.chunk.js.map",
     "index.html": "/cursor.edu-hw-react-redux/index.html",
-    "static/css/main.9a4e5a1b.chunk.css.map": "/cursor.edu-hw-react-redux/static/css/main.9a4e5a1b.chunk.css.map",
-    "static/js/2.dd84eeb9.chunk.js.LICENSE.txt": "/cursor.edu-hw-react-redux/static/js/2.dd84eeb9.chunk.js.LICENSE.txt",
+    "static/css/main.abd616b1.chunk.css.map": "/cursor.edu-hw-react-redux/static/css/main.abd616b1.chunk.css.map",
+    "static/js/2.b7056db4.chunk.js.LICENSE.txt": "/cursor.edu-hw-react-redux/static/js/2.b7056db4.chunk.js.LICENSE.txt",
     "static/media/heart.c412cbae.png": "/cursor.edu-hw-react-redux/static/media/heart.c412cbae.png",
     "static/media/speech-bubble.a7384eca.png": "/cursor.edu-hw-react-redux/static/media/speech-bubble.a7384eca.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ecc61c08.js",
-    "static/js/2.dd84eeb9.chunk.js",
-    "static/css/main.9a4e5a1b.chunk.css",
-    "static/js/main.19f5e2d7.chunk.js"
+    "static/js/runtime-main.5fd56158.js",
+    "static/js/2.b7056db4.chunk.js",
+    "static/css/main.abd616b1.chunk.css",
+    "static/js/main.14d53345.chunk.js"
   ]
 }
